@@ -5,3 +5,6 @@ npm -v
 mkdir demo-project && cd demo-project
 npm init
 npm install jquery
+
+npm install jquery --save
+--save 參數是安裝套件時，也同步更新 package.json 裡的資訊。
