@@ -1,0 +1,1 @@
+curl -o- https://raw.githubusercontent.com/54maxwu/shell/master/nvm.sh | bash 
