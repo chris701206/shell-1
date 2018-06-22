@@ -8,3 +8,8 @@ npm install jquery
 
 npm install jquery --save
 --save 參數是安裝套件時，也同步更新 package.json 裡的資訊。
+
+建立 .gitignore
+在 push repository 之前，我們一件事要注意，就是要加入 .gitignore 
+它會幫我們擋住一些 不必要push的檔案 ，像 node_modules 裡的所有套件
+網路上 全部都下載得到 所以也就沒必要推到我們的 repository。
