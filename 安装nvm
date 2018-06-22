@@ -1,1 +1,3 @@
 curl -o- https://raw.githubusercontent.com/54maxwu/shell/master/nvm.sh | bash 
+安装好后检查
+npm -v
