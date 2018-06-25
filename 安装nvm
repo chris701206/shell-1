@@ -29,4 +29,4 @@ npm install -g yarn
 yarn --version
 
 以yarn 安装
-npm install jquery bootstrap react react-dom babel-core --save
+yarn add jquery bootstrap react react-dom babel-core
