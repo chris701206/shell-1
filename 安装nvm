@@ -28,5 +28,5 @@ npm install -g yarn
 检查有没有安装成功
 yarn --version
 
-以npm 安装
+以yarn 安装
 npm install jquery bootstrap react react-dom babel-core --save
