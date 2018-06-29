@@ -1,4 +1,11 @@
 curl -o- https://raw.githubusercontent.com/54maxwu/shell/master/nvm.sh | bash 
+
+查看目前有的版本
+nvm ls-remote
+
+安裝 nodejs
+nvm install node
+
 安装好后检查
 npm -v
 
