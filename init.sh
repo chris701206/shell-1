@@ -33,3 +33,9 @@ yum install iptables-services
 
 记得
 service iptables restart
+
+限制读取80port
+# -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT 先注解
+最下面设定
+-A IN_public_allow -p tcp -m tcp -s 你的IP --dport 80 -m conntrack --ctstate NEW -j ACCEPT
+
