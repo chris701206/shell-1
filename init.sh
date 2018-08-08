@@ -25,6 +25,9 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 sed -i -e 's/sftp-server/sftp-server -l INFO/i' /etc/ssh/sshd_config
 systemctl restart sshd
 
+
+yum install iptables-services
+
 查看防火牆
 # iptables -L
 
@@ -34,3 +37,7 @@ systemctl restart sshd
 
 關閉port
 # /sbin/iptables -I INPUT -p tcp --dport 80 -j REJECT
+
+记得
+service iptables save
+service iptables restart
