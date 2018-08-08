@@ -24,3 +24,13 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 ##SFTP LOG
 sed -i -e 's/sftp-server/sftp-server -l INFO/i' /etc/ssh/sshd_config
 systemctl restart sshd
+
+查看防火牆
+# iptables -L
+
+開啟port
+# /sbin/iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+# /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT  
+
+關閉port
+# /sbin/iptables -I INPUT -p tcp --dport 80 -j REJECT
