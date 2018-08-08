@@ -28,16 +28,8 @@ systemctl restart sshd
 
 yum install iptables-services
 
-查看防火牆
-# iptables -L
-
-開啟port
-# /sbin/iptables -I INPUT -p tcp --dport 443 -j ACCEPT
-# /sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT  
-
-關閉port
-# /sbin/iptables -I INPUT -p tcp --dport 80 -j REJECT
+修改
+/etc/sysconfig/iptables
 
 记得
-service iptables save
 service iptables restart
