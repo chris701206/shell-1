@@ -39,3 +39,21 @@ service iptables restart
 最下面设定
 -A IN_public_allow -p tcp -m tcp -s 你的IP --dport 80 -m conntrack --ctstate NEW -j ACCEPT
 
+
+curl ipv6
+1.创建一个脚本。
+vi /etc/NetworkManager/dispatcher.d/15-resolv
+#!/bin/bash
+# Description : script to override default resolv.conf file
+# with customized file.
+cp -f /etc/resolv.conf.custom /etc/resolv.conf
+2.设置文件权限
+chmod u+x /etc/NetworkManager/dispatcher.d/15-resolv
+3.创建一个文件（nameserver 处可以查询最优DNS来代替8.8.8.8）
+vi /etc/resolv.conf.custom
+options single-request-reopen
+nameserver 8.8.8.8
+4.重启服务
+service NetworkManager restart
+
+
