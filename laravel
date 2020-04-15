@@ -1,1 +1,19 @@
 composer create-project --prefer-dist laravel/laravel 专案名称
+
+
+server {
+    listen      7777;
+    root /var/www/html/laravel/admin/public;
+    index index.php index.html;
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_read_timeout 300;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  /var/www/html/tgbot$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+
+}
