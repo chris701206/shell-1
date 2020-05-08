@@ -1,6 +1,8 @@
-composer create-project --prefer-dist laravel/laravel 专案名称
+__安装指令__  
+composer create-project --prefer-dist laravel/laravel _专案名称_
 
-
+__nginx设定檔参考__
+```nginx
 server {
     listen      7777;
     root /var/www/html/laravel/admin/public;
@@ -15,5 +17,5 @@ server {
         fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include        fastcgi_params;
     }
-
 }
+```
