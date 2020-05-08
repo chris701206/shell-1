@@ -1,3 +1,4 @@
+__安装php的shell script__
 ```sh
 #!/bin/bash
 rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
