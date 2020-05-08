@@ -1,3 +1,4 @@
+```nginx
 map $http_upgrade $connection_upgrade {
     default upgrade;
     ''      close;
@@ -40,3 +41,4 @@ server {
         proxy_pass http://127.0.0.1:1215$suffix;
     }
 }
+```
