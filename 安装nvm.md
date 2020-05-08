@@ -22,26 +22,26 @@ npm install jquery --save
 擋住一些不必要push的檔案像 node_modules 裡的所有套件  
 網路上都下載得到所以沒必要推到 repository
 
-__查看 npm 版本__  
+>__查看 npm 版本__  
 npm -v 或 npm --versio
 
-__安裝套件在專案下的 node_modules 目錄__  
+>__安裝套件在專案下的 node_modules 目錄__  
 npm i [package] 或 npm install [package]
 
-__安裝套件在專案下的 node_modules 目錄，並更新該套件資訊到 package.json__  
+>__安裝套件在專案下的 node_modules 目錄，並更新該套件資訊到 package.json__  
 npm i [package] --save 或 npm install [package] --save
 
-__移除某套件__  
+>__移除某套件__  
 npm un [package] 或 npm uninstall [package]
 
-__移除某套件，並更新該套件資訊到 package.json__  
+>__移除某套件，並更新該套件資訊到 package.json__  
 npm un [package] --save或 npm uninstall [package] --save
 
 _安装yarn (比npm更快)_  
 npm install -g yarn
 
-__检查有没有安装成功__  
+_检查有没有安装成功_  
 yarn --version
 
-__以yarn 安装__  
+_以yarn 安装_  
 yarn add jquery bootstrap react react-dom babel-core
