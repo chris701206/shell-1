@@ -12,9 +12,11 @@ tcpdump -A -s 0 'src example.com and tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<
 
 tcpdump -A -s 0 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)' -i lo
 
-4. To only include HTTP requests, modify “tcp port 80” to “tcp dst port 80” in above commands
+4. To only include HTTP requests, modify "tcp port 80" to "tcp dst port 80" in above commands
 
 5. Capture TCP packets from local host to local host
 
 tcpdump -i lo
 ```
+- -A：封包的內容以 ASCII 顯示，通常用來捉取 WWW 的網頁封包資料。
+- -s：抓比較長的 data 做一筆記錄。
