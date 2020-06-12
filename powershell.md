@@ -1,4 +1,4 @@
-##powershell 神代碼 把當前系統用最多的記憶體前十 用excel 畫出圖
+### powershell 神代碼 把當前系統用最多的記憶體前十 用excel 畫出圖
 ```powershell
 # create new excel instance
 $objExcel = New-Object -comobject Excel.Application
@@ -20,7 +20,6 @@ $objChart.Chart.ApplyDataLabels(5)
 ```
 
 
-PS
 ps1副檔名不能執行
 > get-executionpolicy  
 > set-executionpolicy remotesigned
