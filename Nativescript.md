@@ -10,7 +10,7 @@ choco install android-sdk -y
 
 npm i -g nativescript
 
-
+```
 $ npm install -g @vue/cli @vue/cli-init
 $ vue init nativescript-vue/vue-cli-template <project-name>
 $ cd <project-name>
@@ -31,3 +31,4 @@ adb devices
 tns device
 
 tns run android
+```
