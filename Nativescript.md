@@ -12,7 +12,7 @@ Android SDK
 choco install android-sdk -y
 
 ```
-* 安裝 tns
+* 安裝 tns  
 npm i -g nativescript
 
 ```
