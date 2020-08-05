@@ -43,14 +43,18 @@ curl -H "Accept-Encoding: gzip" -I https://URL
 
 安裝好 Laravel 需要設定 storage 的權限
 
-* chmod -R 0755 storage
+```
+chmod -R 0755 storage
+```
 
 這邊的擁有者要和 /etc/php-fpm.d/www.conf 的一致
 
-; RPM: apache user chosen to provide access to the same directories as httpd
+```
 user = nginx
-; RPM: Keep a group allowed to write in log dir.
 group = nginx
+```
 
+這時需要用這指令
+```
 chown -R nginx:nginx storage
-
+```
