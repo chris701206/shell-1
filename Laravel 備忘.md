@@ -41,6 +41,7 @@ gzip_types text/plain text/css application/json application/javascript text/xml 
 curl -H "Accept-Encoding: gzip" -I https://URL
 ```
 
+---
 安裝好 Laravel 需要設定 storage 的權限
 
 ```
