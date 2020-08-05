@@ -8,3 +8,35 @@
 /sbin/mkswap /var/swap.1
 /sbin/swapon /var/swap.1
 ```
+重開機就會還原，所以要寫在檔案內
+
+```
+vim /etc/fstab
+```
+
+加入一行
+```
+/var/swap.1 none swap sw 0 0
+```
+
+---
+Nginx 開啟 Gzip壓縮
+
+```
+sudo vim /etc/nginx/nginx.conf
+```
+把 #注解拿掉
+```
+gzip on;
+gzip_comp_level 6;
+gzip_buffers 16 8k;
+gzip_http_version 1.1;
+gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript
+```
+
+記得重啟
+
+測試指令
+```
+curl -H "Accept-Encoding: gzip" -I https://URL
+```
