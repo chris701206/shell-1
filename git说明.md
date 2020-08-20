@@ -6,3 +6,8 @@ git config --global credential.helper store
 ```
 再上传一次打入帐密  
 下次上传就不需要再输入了
+
+使 git 不能 push
+````
+git remote set-url --push origin no_push
+````
